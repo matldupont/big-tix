@@ -1,0 +1,7 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mat Dupont <dupont.mat.l@gmail.com> (https://matdupont.com/)",
+  "license": "MIT"
+}
