@@ -1,0 +1,20 @@
+apiVersion: skaffold/v2beta11
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
+metadata:
+  name: big-tix
+build:
+  local:
+    push: false
+  artifacts:
+  - image: matldupont/big-tix-auth
+    context: auth
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      manual:
+        - src: '/src/**/*.ts'
+          dest: .
