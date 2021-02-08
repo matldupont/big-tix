@@ -10,8 +10,7 @@ spec:
   - host: big-tix.dev
     http:
       paths:
-      - pathType: Prefix
-        path: "/api/users/?(.*)"
+      - path: "/api/users/?(.*)"
         backend:
           serviceName: auth-srv
           servicePort: 3000

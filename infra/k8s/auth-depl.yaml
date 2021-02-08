@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: auth
-        image: matldupont/big-tix-auth
+        image: us.gcr.io/big-tix-dev/auth
 
 ---
 apiVersion: v1

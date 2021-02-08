@@ -7,10 +7,12 @@ deploy:
 metadata:
   name: big-tix
 build:
-  local:
-    push: false
+  # local:
+  #   push: false
+  googleCloudBuild:
+    projectId: big-tix-dev
   artifacts:
-  - image: matldupont/big-tix-auth
+  - image: us.gcr.io/big-tix-dev/auth
     context: auth
     docker:
       dockerfile: Dockerfile
